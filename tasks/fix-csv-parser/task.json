@@ -1,0 +1,8 @@
+{
+  "id": "fix-csv-parser",
+  "instruction": "csv_parser.parse_line() splits a CSV record on every delimiter and strips all double quotes, so quoted fields such as \"Smith, John\" or \"say \"\"hi\"\"\" come out wrong. Fix parse_line(line, delimiter=',') so that: fields wrapped in double quotes may contain the delimiter; inside a quoted field a doubled quote (\"\") means one literal quote; quotes in the middle of an unquoted field are kept literally; whitespace is preserved; a trailing \\n or \\r\\n is ignored; an unterminated quoted field raises ValueError. parse(text) must keep returning one list per non-blank line. Do not use the csv module.",
+  "timeout": 30,
+  "solution_target": "csv_parser.py",
+  "difficulty": "easy",
+  "tags": ["bugfix", "parsing"]
+}
