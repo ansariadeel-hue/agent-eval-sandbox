@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-eval-sandbox"
+version = "0.1.0"
+description = "Terminal-Bench-style harness for authoring and grading agent coding tasks, with must-fail grader validation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ansari Adeel Ahmad" }]
+keywords = ["agents", "evaluation", "benchmark", "grading", "pytest"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+# The graders themselves run under pytest in a subprocess.
+dev = ["pytest"]
+
+[project.scripts]
+agent-sandbox = "agent_sandbox.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+norecursedirs = ["tasks", "examples", ".git", "*.egg-info"]
