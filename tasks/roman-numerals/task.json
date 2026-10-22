@@ -1,0 +1,8 @@
+{
+  "id": "roman-numerals",
+  "instruction": "Implement to_roman(n) and from_roman(s) in roman.py. to_roman converts an int in 1..3999 to its canonical uppercase Roman numeral (e.g. 1994 -> 'MCMXCIV'); it raises TypeError for non-int input (including bool) and ValueError for ints outside 1..3999. from_roman parses a canonical uppercase numeral back to an int and raises ValueError for anything else: empty strings, lowercase, unknown characters, surrounding whitespace, and non-canonical forms such as 'IIII', 'VV', 'IC', 'XM' or 'MMMM'. It raises TypeError if s is not a str. For every n in 1..3999, from_roman(to_roman(n)) == n.",
+  "timeout": 30,
+  "solution_target": "roman.py",
+  "difficulty": "easy",
+  "tags": ["implementation", "edge-cases"]
+}
