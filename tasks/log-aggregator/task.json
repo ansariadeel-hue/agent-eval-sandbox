@@ -1,0 +1,8 @@
+{
+  "id": "log-aggregator",
+  "instruction": "Implement aggregate(lines, top=3) and aggregate_file(path, top=3) in log_aggregator.py. Each log line looks like 'YYYY-MM-DD HH:MM:SS LEVEL component: message' where LEVEL is one of DEBUG, INFO, WARNING, ERROR, CRITICAL (uppercase) and the timestamp must be a real calendar date/time. Blank lines are ignored; any other line that does not match is malformed. Return a dict with: 'total' (well-formed lines), 'malformed' (count), 'by_level' ({level: count}, only levels that occur), 'by_hour' ({'YYYY-MM-DD HH': count}), and 'top_errors': a list of [component, message, count] for ERROR and CRITICAL lines grouped by (component, message), sorted by count descending, then component, then message ascending, truncated to `top` entries. Messages are compared after stripping surrounding whitespace. aggregate_file reads the file as UTF-8. See logs/app.log for a sample.",
+  "timeout": 30,
+  "solution_target": "log_aggregator.py",
+  "difficulty": "medium",
+  "tags": ["implementation", "text-processing"]
+}
