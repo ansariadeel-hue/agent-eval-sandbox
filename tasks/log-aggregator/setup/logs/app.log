@@ -1,0 +1,13 @@
+2026-03-01 09:58:12 INFO api: server started
+2026-03-01 09:59:40 DEBUG db: pool size 10
+2026-03-01 10:01:03 ERROR db: connection refused
+2026-03-01 10:02:44 WARNING api: slow response 1200ms
+2026-03-01 10:05:10 ERROR api: upstream timeout
+2026-03-01 10:07:55 ERROR db: connection refused
+
+2026-03-01 10:15:00 CRITICAL db: disk full
+this line is not a log record
+2026-03-01 11:00:01 INFO api: request ok
+2026-02-30 11:01:00 ERROR db: impossible date
+2026-03-01 11:20:30 ERROR api: upstream timeout
+2026-03-01 11:45:00 info api: lowercase level is malformed
